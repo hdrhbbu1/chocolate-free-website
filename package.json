@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Chocolate Free Blog",
   "main": "index.js",
-	"author": "Khaled Garbaya <kgarbaya@gmail.com>",
+  "author": "Khaled Garbaya <kgarbaya@gmail.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/Khaledgarbaya/chocolate-free-website"
@@ -14,7 +14,7 @@
     "start": "node build.js",
     "lint": "standard \"helpers/**/*.js\" \"build.js\"",
     "watch": "gazer --pattern '{src,layouts,helpers,partials}/**/*' node build.js",
-		"deploy":"ftpsync --user $CF_SSH_USER --pass $CF_SSH_PASS --host \"chocolate-free.com\" --local ./build --ignore .git"
+    "deploy": "ftpsync --user $CF_SSH_USER --pass $CF_SSH_PASS --host \"chocolate-free.com\" --local ./build --ignore .git"
   },
   "license": "Apache-2.0",
   "dependencies": {
@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "cz-conventional-changelog": "^1.2.0",
+    "ftpsync": "^0.1.10",
     "live-server": "^1.1.0",
     "npm-run-all": "^3.0.0"
   },
