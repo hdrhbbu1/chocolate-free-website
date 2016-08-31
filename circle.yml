@@ -6,6 +6,7 @@ dependencies:
     - npm install
 deployment:
   production:
+    branch: master
     commands:
       - npm start
       - npm run deploy
