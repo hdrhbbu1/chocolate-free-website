@@ -18,7 +18,10 @@ body {
   flex-direction: column;
   font-family: 'Open Sans', sans-serif;
 }
-
+img {
+	display: block;
+	width:100%;
+}
 a {
   color: inherit;
 
