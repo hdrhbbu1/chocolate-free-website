@@ -17,11 +17,11 @@
           <div class="c-article c-card u-marginBottomLarge">
 						{{> articleHeader fields  _fileName=_fileName }}
 						
-  {{#if fields.featureImage}}
-			<img alt="feature Image" src="{{fields.featureImage.fields.file.url}}?w=800&h=300&fit=crop"/>
-  {{/if}}
+						{{#if fields.featureImage}}
+								<img alt="feature Image" src="{{fields.featureImage.fields.file.url}}?w=800&h=300&fit=crop"/>
+						{{/if}}
             <p data-markdown>{{ shorten fields.content }}</p>
-            <a href="{{ _fileName }}">Read more...</a>
+            <a rel="noopener" href="{{ _fileName }}">Read more...</a>
           </div>
         </li>
       {{/each}}

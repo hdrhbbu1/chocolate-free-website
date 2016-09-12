@@ -1,21 +1,55 @@
+/* =Header & Social navigation
+-------------------------------------------------------------- */
+#masthead {
+	position: relative;
+	padding: 50px 0 0 0;
+	padding-top: 2.142857142rem 0 0 0;
+	text-align: center;
+}
+#masthead div.logo img { width: 220px; height: 152px; margin: 0 auto; margin-top: 50px; margin-bottom:40px; }
+
+div.socialnav {
+	position: absolute;
+	right: 0;
+	top: 14px;
+	top: 1rem;
+	font-size: 12px;
+	font-size: 0.857142857rem;
+	line-height: 2;
+	color: #444;
+}
+div.socialnav a {
+	color: #444;
+	text-decoration: none;
+	font-weight: 100;
+	text-transform: uppercase;
+}
+div.socialnav a:hover {
+	color: #000;
+}
+div.socialnav span {
+	margin: 0 5px;
+	font-size: 1.4em;
+	color: pink;
+}
 .c-nav {
-  font-size: 1.25em;
+	font-size: 1.05em;
+	&__list {
+		list-style: none;
+		margin: 0;
+		padding: 1em;
+		border-bottom: 1px solid #ededed;
+		border-top: 1px solid #ededed;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-  &__list {
-    list-style: none;
-    margin: 0;
-    padding: 1em;
+		> li {
+			margin: 0 1em;
+		}
+	}
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    > li {
-      margin: 0 1em;
-    }
-  }
-
-  a {
-    text-decoration: none;
-  }
+	a {
+		text-decoration: none;
+	}
 }
