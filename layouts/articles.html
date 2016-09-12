@@ -1,32 +1,32 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>{{ title }}</title>
-  <meta name="description" content="{{ description }}">
-  <meta name="author" content="Contentful">
-  <link rel="stylesheet" href="/style/main.css?v=1.0">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-</head>
-<body>
-  <main class="l-container">
-    {{> header}}
-    <ul class="c-paddedList">
-      {{#each data.entries}}
-        <li>
-          <div class="c-article c-card u-marginBottomLarge">
-						{{> articleHeader fields  _fileName=_fileName }}
-						
-						{{#if fields.featureImage}}
-								<img alt="feature Image" src="{{fields.featureImage.fields.file.url}}?w=800&h=300&fit=crop"/>
-						{{/if}}
-            <p data-markdown>{{ shorten fields.content }}</p>
-            <a rel="noopener" href="{{ _fileName }}">Read more...</a>
-          </div>
-        </li>
-      {{/each}}
-    </ul>
-  </main>
-  {{> footer}}
-</body>
+	<head>
+		<meta charset="utf-8">
+		<title>{{ title }}</title>
+		<meta name="description" content="{{ description }}">
+		<meta name="author" content="Contentful">
+		<link rel="stylesheet" href="/style/main.css?v=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	</head>
+	<body>
+		<main class="l-container">
+		{{> header}}
+		<ul class="c-paddedList">
+			{{#each data.entries}}
+			<li>
+				<div class="c-article c-card u-marginBottomLarge">
+					{{> articleHeader fields  _fileName=_fileName }}
+
+					{{#if fields.featureImage}}
+					<img alt="feature Image" src="{{fields.featureImage.fields.file.url}}?w=800&h=300&fit=crop"/>
+					{{/if}}
+					<p data-markdown>{{ shorten fields.content }}</p>
+					<a rel="noopener" href="{{ _fileName }}">Read more...</a>
+				</div>
+			</li>
+			{{/each}}
+		</ul>
+		</main>
+		{{> footer}}
+	</body>
 </html>
