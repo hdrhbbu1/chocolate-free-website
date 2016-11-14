@@ -17,10 +17,12 @@
 		<article class="c-article">
 			{{> articleHeader data.fields _fileName=_fileName }}
 			<div data-markdown>{{ data.fields.content}}</div>
+      <a href="//yummly.com" class="YUMMLY-YUM-BUTTON">Yum</a>
 
 			{{> articleAuthor data.fields.author }}
 		</article>
 		</main>
 		{{> footer}}
 	</body>
+    <script async src="https://www.yummly.com/js/widget.js?general"></script>
 </html>
