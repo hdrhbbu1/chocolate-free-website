@@ -26,6 +26,7 @@
     "metalsmith": "^2.1.0",
     "metalsmith-assets": "^0.1.0",
     "metalsmith-clean": "^0.0.0",
+    "metalsmith-collections": "^0.9.0",
     "metalsmith-data-markdown": "0.0.3",
     "metalsmith-drafts": "^0.0.1",
     "metalsmith-feed-js": "^0.3.0",
