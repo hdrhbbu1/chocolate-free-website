@@ -8,7 +8,8 @@ const dataMarkdown = require('metalsmith-data-markdown')
 const contentful = require('contentful-metalsmith')
 
 const handlebars = require('handlebars')
-
+const collections = require('metalsmith-collections')
+const feed = require('metalsmith-feed-js')
 // add custom helpers to handlebars
 // https://github.com/superwolff/metalsmith-layouts/issues/63
 //
@@ -25,6 +26,13 @@ glob.sync('helpers/*.js').forEach((fileName) => {
 Metalsmith(__dirname)
   .source('src')
   .destination('build')
+  .metadata({
+    site: {
+      title: 'Chocolate Free',
+      url: 'http://chocolate-free.com',
+      author: 'Amal Nasri'
+    }
+  })
   .use(contentful({
     space_id: '0w6gaytm0wfv',
     access_token: 'c6653b087ff7b60218a55c469abbb1306f76d1ed3a92bb9a5007f7351084b2ce'
@@ -43,6 +51,12 @@ Metalsmith(__dirname)
   .use(markdown())
   .use(dataMarkdown({
     removeAttributeAfterwards: true
+  }))
+  .use(collections({
+    posts: '*.html'
+  }))
+  .use(feed({
+    collection: 'posts'
   }))
   .build(function (err) {
     if (err) throw err
