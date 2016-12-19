@@ -5,8 +5,8 @@ dependencies:
   override:
     - npm install
 deployment:
-  production:
+  prod:
     branch: master
     commands:
       - npm start
-      - npm run deploy
+      - aws s3 sync build s3://chocolate-free.com --delete
