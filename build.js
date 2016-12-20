@@ -8,8 +8,6 @@ const dataMarkdown = require('metalsmith-data-markdown')
 const contentful = require('contentful-metalsmith')
 
 const handlebars = require('handlebars')
-const collections = require('metalsmith-collections')
-const feed = require('metalsmith-feed-js')
 // add custom helpers to handlebars
 // https://github.com/superwolff/metalsmith-layouts/issues/63
 //
@@ -51,12 +49,6 @@ Metalsmith(__dirname)
   .use(markdown())
   .use(dataMarkdown({
     removeAttributeAfterwards: true
-  }))
-  .use(collections({
-    posts: '*.html'
-  }))
-  .use(feed({
-    collection: 'posts'
   }))
   .build(function (err) {
     if (err) throw err
