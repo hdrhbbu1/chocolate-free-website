@@ -1,0 +1,20 @@
+{{> head}}
+	<body>
+		<main class="l-container">
+		{{> header}}
+		<article class="c-article">
+      {{#each data.entries}}
+      <div class="c-article c-card u-marginBottomLarge">
+					{{> singlePageHeader fields  _fileName=_fileName }}
+
+					{{#if fields.featureImage}}
+					<img alt="feature Image" src="{{fields.featureImage.fields.file.url}}?w=800"/>
+					{{/if}}
+					<p data-markdown>{{ fields.content }}</p>
+			</div>
+			{{/each}}
+		</article>
+		</main>
+		{{> footer}}
+	</body>
+</html>
