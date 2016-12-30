@@ -2,15 +2,28 @@
 <body>
 		<main class="l-container">
 		{{> header}}
-		<p>
+		<p class="go-back-link">
 		<a href="/{{ _parentFileName }}">Go back</a>
 		</p>
 		<article class="c-article">
 			{{> articleHeader data.fields _fileName=_fileName }}
 			<div data-markdown>{{ data.fields.content}}</div>
-      <a href="//yummly.com" class="YUMMLY-YUM-BUTTON">Yum</a>
 
 			{{> articleAuthor data.fields.author }}
+		<!-- AddToAny BEGIN -->
+		<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+		<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+		<a class="a2a_button_facebook"></a>
+		<a class="a2a_button_twitter"></a>
+		<a class="a2a_button_google_plus"></a>
+		<a class="a2a_button_pinterest"></a>
+		<a class="a2a_button_reddit"></a>
+		<a class="a2a_button_stumbleupon"></a>
+		<a class="a2a_button_print"></a>
+		<a class="a2a_button_yummly"></a>
+		</div>
+		<script async src="https://static.addtoany.com/menu/page.js"></script>
+		<!-- AddToAny END -->
 		</article>
 		<!-- disqus comments -->
 		<div id="disqus_thread"></div>
@@ -32,5 +45,4 @@
 		</main>
 		{{> footer}}
 	</body>
-    <script async src="https://www.yummly.com/js/widget.js?general"></script>
 </html>
