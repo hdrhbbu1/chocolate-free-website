@@ -14,3 +14,4 @@ deployment:
     commands:
       - npm start
       - aws s3 sync build s3://chocolate-free.com --delete
+      - aws cloudfront create-invalidation --cli-input-json "{\"DistributionId\":\"$CLOUD_FRONT_INSTANCE\",\"InvalidationBatch\":{\"Paths\":{\"Quantity\":1,\"Items\":[\"/*\"]},\"CallerReference\":\"$(date +%s)\"}}"
