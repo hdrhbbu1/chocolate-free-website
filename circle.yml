@@ -4,9 +4,10 @@ machine:
 dependencies:
   override:
     - npm install
-post:
-  - aws configure set preview.cloudfront true
-  - aws configure set preview.create-invalidation true
+checkout:
+  post:
+    - aws configure set preview.cloudfront true
+    - aws configure set preview.create-invalidation true
 test:
   override:
     - echo "test"
