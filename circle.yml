@@ -4,6 +4,10 @@ machine:
 dependencies:
   override:
     - npm install
+test:
+  override:
+    - echo "test"
+    
 deployment:
   prod:
     branch: master
