@@ -17,5 +17,7 @@ deployment:
     branch: master
     commands:
       - npm start
+      - export FILE_NAME=index-$(date "+%s").html
+      - mv build/index.html build/$FILE_NAME
       - aws s3 sync build s3://chocolate-free.com --delete
-      - aws cloudfront create-invalidation --cli-input-json "{\"DistributionId\":\"$CLOUD_FRONT_INSTANCE\",\"InvalidationBatch\":{\"Paths\":{\"Quantity\":1,\"Items\":[\"/*\"]},\"CallerReference\":\"$(date +%s)\"}}"
+      - aws s3 website s3://chocolate-free.com --index-document $FILE_NAME
