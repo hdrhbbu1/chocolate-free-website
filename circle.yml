@@ -1,4 +1,6 @@
 machine:
+  environment:
+    FILE_NAME: index-$(date "+%s").html
   node:
     version: 4.0.0
 dependencies:
@@ -17,7 +19,6 @@ deployment:
     branch: master
     commands:
       - npm start
-      - export FILE_NAME=index-$(date "+%s").html
       - mv build/index.html build/$FILE_NAME
       - aws s3 sync build s3://chocolate-free.com --delete
       - aws s3 website s3://chocolate-free.com --index-document $FILE_NAME
