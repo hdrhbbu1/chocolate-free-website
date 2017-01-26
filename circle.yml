@@ -1,15 +1,11 @@
 machine:
   environment:
-    FILE_NAME: index-$(date "+%s").html
+    FILE_NAME: index-$CIRCLE_SHA1.html
   node:
     version: 4.0.0
 dependencies:
   override:
     - npm install
-checkout:
-  post:
-    - aws configure set preview.cloudfront true
-    - aws configure set preview.create-invalidation true
 test:
   override:
     - echo "test"
