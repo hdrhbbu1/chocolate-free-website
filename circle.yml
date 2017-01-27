@@ -1,6 +1,4 @@
 machine:
-  environment:
-    FILE_NAME: index-$CIRCLE_SHA1.html
   node:
     version: 4.0.0
 dependencies:
@@ -9,12 +7,14 @@ dependencies:
 test:
   override:
     - echo "test"
-    
+checkout:
+  post:
+    - aws configure set preview.cloudfront true
+    - aws configure set preview.create-invalidation true    
 deployment:
   prod:
     branch: master
     commands:
       - npm start
-      - mv build/index.html build/$FILE_NAME
       - aws s3 sync build s3://chocolate-free.com --delete
-      - aws s3 website s3://chocolate-free.com --index-document $FILE_NAME
+      - aws cloudfront create-invalidation --cli-input-json "{\"DistributionId\":\"$CLOUD_FRONT_INSTANCE\",\"InvalidationBatch\":{\"Paths\":{\"Quantity\":1,\"Items\":[\"/*\"]},\"CallerReference\":\"$(date +%s)\"}}"
