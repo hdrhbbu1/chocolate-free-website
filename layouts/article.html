@@ -2,9 +2,6 @@
 <body>
 		<main class="l-container">
 		{{> header}}
-		<p class="go-back-link">
-		<a href="/{{ _parentFileName }}">Go back</a>
-		</p>
 		<article class="c-article">
 			{{> articleHeader data.fields _fileName=_fileName }}
 			<div data-markdown>{{ data.fields.content}}</div>
