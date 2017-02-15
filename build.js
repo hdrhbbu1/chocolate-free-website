@@ -48,7 +48,6 @@ Metalsmith(__dirname)
     metadata['collections'] = {'articles': []}
     var articles = metadata.collections.articles
     for (var key in files) {
-      console.log('Match')
       if (key.indexOf('article') >= 0) {
         articles.push(files[key])
       }
