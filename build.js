@@ -6,7 +6,7 @@ const sass = require('metalsmith-sass')
 const markdown = require('metalsmith-markdown')
 const dataMarkdown = require('metalsmith-data-markdown')
 const contentful = require('contentful-metalsmith')
-var rssfeed     = require('metalsmith-rssfeed')
+const rssfeed = require('metalsmith-rssfeed')
 const handlebars = require('handlebars')
 // add custom helpers to handlebars
 // https://github.com/superwolff/metalsmith-layouts/issues/63
@@ -43,6 +43,18 @@ Metalsmith(__dirname)
     source: 'assets/',
     destination: 'assets/'
   }))
+  .use(function (files, metalsmith, done) {
+    var metadata = metalsmith.metadata()
+    metadata['collections'] = {'articles': []}
+    var articles = metadata.collections.articles
+    for (var key in files) {
+      console.log('Match')
+      if (key.indexOf('article') >= 0) {
+        articles.push(files[key])
+      }
+    }
+    done()
+  })
   .use(sass({
     outputStyle: 'compressed'
   }))
@@ -51,7 +63,8 @@ Metalsmith(__dirname)
     removeAttributeAfterwards: true
   }))
   .use(rssfeed({
-    collection: 'posts',
+    siteUrl: 'https://chocolate-free.com',
+    collectionKey: 'articles',
     name: 'feed.xml'
   }))
   .build(function (err) {
