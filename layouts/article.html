@@ -3,21 +3,9 @@
 		<main class="l-container">
 		{{> header}}
 		<article class="c-article">
-			{{> articleHeader data.fields _fileName=_fileName }}
-			
-			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-			<!-- ad -->
-			<ins class="adsbygoogle"
-			     style="display:block"
-			     data-ad-client="ca-pub-4730331156886045"
-			     data-ad-slot="1323485813"
-			     data-ad-format="auto"></ins>
-			<script>
-			(adsbygoogle = window.adsbygoogle || []).push({});
-			</script>
-					
+			{{> articleHeader data.fields _fileName=_fileName }}					
 		<div data-markdown>{{ data.fields.content}}</div>
-		
+			
 		{{> articleAuthor data.fields.author }}
 		<!-- AddToAny BEGIN -->
 		<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
