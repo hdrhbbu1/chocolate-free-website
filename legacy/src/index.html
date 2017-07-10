@@ -1,0 +1,11 @@
+---
+title: Chocolate Free Blog
+contentful:
+  content_type: article 
+  entry_filename_pattern: article/${ fields.slug }
+  entry_template: article.html
+  order: -sys.createdAt
+  filter:
+    'fields.section': 'Recipes'
+layout: articles.html
+---

@@ -40,3 +40,8 @@ jspm_packages
 
 #Metalsmith
 build
+*.swp
+*.swo
+public
+.cache
+.bin

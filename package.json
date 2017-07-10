@@ -9,40 +9,25 @@
     "url": "https://github.com/Khaledgarbaya/chocolate-free-website"
   },
   "scripts": {
-    "dev": "run-p watch serve",
-    "serve": "live-server ./build",
-    "start": "node build.js",
-    "lint": "standard \"helpers/**/*.js\" \"build.js\"",
-    "watch": "gazer --pattern '{src,layouts,helpers,partials}/**/*' node build.js",
-    "deploy": "ftpsync --user $CF_SSH_USER --pass $CF_SSH_PASS --host \"chocolate-free.com\" --local ./build --ignore .git"
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "start": "gatsby serve"
   },
-  "license": "Apache-2.0",
+  "license": "MIT",
   "dependencies": {
-    "bootstrap-sass": "^3.3.7",
-    "contentful-metalsmith": "^0.7.0",
-    "gazer": "^0.0.3",
-    "glob": "^7.0.6",
-    "handlebars": "^4.0.0",
-    "metalsmith": "^2.1.0",
-    "metalsmith-assets": "^0.1.0",
-    "metalsmith-clean": "^0.0.0",
-    "metalsmith-collections": "^0.9.0",
-    "metalsmith-data-markdown": "0.0.3",
-    "metalsmith-drafts": "^0.0.1",
-    "metalsmith-layouts": "^1.6.5",
-    "metalsmith-markdown": "^0.2.1",
-    "metalsmith-rssfeed": "0.0.6",
-    "metalsmith-sass": "^1.3.0"
-  },
-  "devDependencies": {
-    "cz-conventional-changelog": "^1.2.0",
-    "ftpsync": "^0.1.10",
-    "live-server": "^1.1.0",
-    "npm-run-all": "^3.0.0"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
+    "gatsby": "^1.0.7",
+    "gatsby-link": "^1.0.9",
+    "gatsby-plugin-google-analytics": "^1.0.1",
+    "gatsby-plugin-manifest": "^1.0.1",
+    "gatsby-plugin-offline": "^1.0.1",
+    "gatsby-plugin-sass": "^1.0.1",
+    "gatsby-plugin-sitemap": "^1.0.1",
+    "gatsby-source-contentful": "^1.0.1",
+    "gatsby-transformer-remark": "^1.0.9",
+    "lodash": "^4.16.4",
+    "react-typography": "^0.15.0",
+    "slash": "^1.0.0",
+    "typography": "^0.15.8",
+    "typography-breakpoint-constants": "^0.14.0"
   }
 }
