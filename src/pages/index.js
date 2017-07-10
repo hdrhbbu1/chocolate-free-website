@@ -34,7 +34,7 @@ class IndexPage extends React.Component {
     const articles = this.props.data.allContentfulArticle.edges
     return (
       <ul className="c-paddedList">
-        {articles.map(({ node }, i) => <Article node={node} key={i} />)}
+        {articles.map(({ node }, i) => node.section === 'Recipes' && <Article node={node} key={i} />)}
       </ul>
     )
   }
@@ -52,6 +52,7 @@ export const pageQuery = graphql`
           id
           title
           slug
+          section
           publishDate
           content {
             childMarkdownRemark {

@@ -27,8 +27,8 @@ const Header = () => {
       <nav className="c-nav">
         <ul className="c-nav__list"> 
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/about.html">About</Link></li>
-          <li><Link to="/hors-sujet.html">Hors sujet</Link></li>
+          <li><Link to="/about/">About</Link></li>
+          <li><Link to="/hors-sujet/">Hors sujet</Link></li>
         </ul>
       </nav>
     </header>

@@ -4,7 +4,9 @@ const ArticleHeader = ({ node }) => {
   return (
     <div className="c-article__header">
     <h1 className="c-article__headline">
-      <Link to={`/article/${node.slug}`}>{ node.title }</Link>
+    <Link to={node.slug !== '#' ?
+      `/article/${node.slug}`:
+      `#`}>{ node.title }</Link>
     </h1>
     <div className="c-article__date">
       <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">

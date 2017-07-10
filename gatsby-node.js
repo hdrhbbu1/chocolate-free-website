@@ -54,3 +54,19 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       .then(resolve)
   })
 }
+// Implement the Gatsby API “onCreatePage”. This is
+// called after every page is created.
+exports.onCreatePage = async ({ page, boundActionCreators }) => {
+  const { createPage } = boundActionCreators
+
+  return new Promise((resolve, reject) => {
+    if (page.path.match(/^\/HorsSujet/)) {
+      page.matchPath = "/hors-sujet/"
+
+      // Update the page.
+      createPage(page)
+    }
+
+    resolve()
+  })
+}

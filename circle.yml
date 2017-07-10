@@ -1,0 +1,20 @@
+machine:
+  node:
+    version: 8
+dependencies:
+  override:
+    - npm install
+test:
+  override:
+    - echo "test"
+checkout:
+  post:
+    - aws configure set preview.cloudfront true
+    - aws configure set preview.create-invalidation true    
+deployment:
+  prod:
+    branch: master
+    commands:
+      - npm run build
+      - aws s3 sync public s3://chocolate-free.com --delete
+      - aws cloudfront create-invalidation --cli-input-json "{\"DistributionId\":\"$CLOUD_FRONT_INSTANCE\",\"InvalidationBatch\":{\"Paths\":{\"Quantity\":1,\"Items\":[\"/*\"]},\"CallerReference\":\"$(date +%s)\"}}"
