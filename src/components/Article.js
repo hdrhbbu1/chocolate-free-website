@@ -19,7 +19,7 @@ const Article = ({ node }) => {
           }
           <div dangerouslySetInnerHTML={{ __html: node.content.childMarkdownRemark.excerpt }}/>
 
-					<Link rel="noopener" to={`/article/${node.slug}`}>Read more...</Link>
+					<Link rel="noopener" to={`/article/${node.slug}.html`}>Read more...</Link>
 				</div>
 			</li>
   )

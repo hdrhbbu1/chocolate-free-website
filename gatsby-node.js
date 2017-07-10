@@ -42,7 +42,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             // as a template component. The `context` is
             // optional but is often necessary so the template
             // can query data specific to each page.
-            path: `/article/${edge.node.slug}/`,
+            path: `/article/${edge.node.slug}.html`,
             component: slash(articleTemplate),
             context: {
               id: edge.node.id,
@@ -61,9 +61,15 @@ exports.onCreatePage = async ({ page, boundActionCreators }) => {
 
   return new Promise((resolve, reject) => {
     if (page.path.match(/^\/HorsSujet/)) {
-      page.matchPath = "/hors-sujet/"
+      page.matchPath = "/hors-sujet.html"
 
       // Update the page.
+      createPage(page)
+    }
+
+    if (page.path.match(/^\/About/)) {
+      page.matchPath = "/about.html"
+
       createPage(page)
     }
 

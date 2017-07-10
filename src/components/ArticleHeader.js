@@ -5,7 +5,7 @@ const ArticleHeader = ({ node }) => {
     <div className="c-article__header">
     <h1 className="c-article__headline">
     <Link to={node.slug !== '#' ?
-      `/article/${node.slug}`:
+      `/article/${node.slug}.html`:
       `#`}>{ node.title }</Link>
     </h1>
     <div className="c-article__date">
