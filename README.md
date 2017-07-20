@@ -3,8 +3,8 @@ My wife's [Blog](http://chocolate-free.com/) using Contentful (Headless CMS)
 
 ## Tools Used
 * [Contentful](http://contentful.com) Like a CMS... without the bad bits for content management
-* [Metalsmith](http://www.metalsmith.io/) An extremely simple, pluggable static site generator.
-* [contentful-metalsmith plugin](https://github.com/contentful/contentful-metalsmith) A Metalsmith' plugin to generate files using content from Contentful
+* [Gatsby](https://www.gatsbyjs.org) Blazing fast static site generator for React 
+* [gatsby-source-contentful](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-contentful) Source plugin for pulling content types, entries, and assets into Gatsby from Contentful spaces
 * [Circle CI](https://circleci.com/) for automating the build process
 
 ## Workflow
