@@ -21,7 +21,7 @@ const Header = () => {
       </div>
 
       <div className="logo">
-        <Link to="http://www.chocolate-free.com/"><img className="c-header__logo" src="/assets/chocolate_free_logo.png" alt="Chocolate Free"/></Link>
+        <Link to="/"><img className="c-header__logo" src="/assets/chocolate_free_logo.png" alt="Chocolate Free"/></Link>
       </div>
 
       <nav className="c-nav">
