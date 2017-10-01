@@ -1,9 +1,8 @@
 
 import React from 'react'
 import ArticleHeader from './ArticleHeader'
-import Link from 'gatsby-link'
 
-const Article = ({ node, excerpt=false }) => {
+const Article = ({ node, excerpt = false }) => {
   node.slug = '#'
   return (
       <li>

@@ -12,11 +12,11 @@ const Header = () => {
     <header id="masthead" className="site-header" role="banner">
       <div className="socialnav">
         <p>
-          <Link to="https://www.facebook.com/chocolatefreedotcom/" rel="noopener" target="blank" className="facebook">Facebook</Link>
+          <a href="https://www.facebook.com/chocolatefreedotcom/" rel="noopener" target="blank" className="facebook">Facebook</a>
           <span/>
-          <Link to="https://www.instagram.com/amalnasri/" rel="noopener" target="blank" className="instagram">Instagram</Link>
+          <a href="https://www.instagram.com/amalnasri/" rel="noopener" target="blank" className="instagram">Instagram</a>
           <span/>
-          <Link to="https://www.pinterest.com/chocolate_free/" target="blank" rel="noopener" className="pinterest">Pinterest</Link>
+          <a href="https://www.pinterest.com/chocolate_free/" target="blank" rel="noopener" className="pinterest">Pinterest</a>
         </p>
       </div>
 
