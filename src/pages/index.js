@@ -16,7 +16,7 @@ const Article = ({ node }) => {
           src={`${node.featureImage.file.url}?w=800`}
         />
         <p>{node.content.childMarkdownRemark.excerpt}</p>
-        <Link rel='noopener' to={`/article/${node.slug}`}>Read more...</Link>
+        <Link rel='noopener' to={`/article/${node.slug}.html`}>Read more...</Link>
       </div>
     </li>
   )
