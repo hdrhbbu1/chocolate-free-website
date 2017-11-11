@@ -35,7 +35,7 @@ class Html extends React.Component {
       <html lang="en" prefix="op: http://media.facebook.com/op#">
         <head>
           {headComponents}
-          <meta charset="utf-8"/>
+          <meta charSet="utf-8"/>
           <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
           <title>Chocolate Free</title>
           <link rel="apple-touch-icon" sizes="180x180" href="https://chocolate-free.com/assets/apple-touch-icon.png"/>
