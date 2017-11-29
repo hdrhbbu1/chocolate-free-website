@@ -14,7 +14,7 @@ const Header = () => {
         <p>
           <a href="https://www.facebook.com/chocolatefreedotcom/" rel="noopener" target="blank" className="facebook">Facebook</a>
           <span/>
-          <a href="https://www.instagram.com/amalnasri/" rel="noopener" target="blank" className="instagram">Instagram</a>
+          <a href="https://www.instagram.com/chocolatefreeblog/" rel="noopener" target="blank" className="instagram">Instagram</a>
           <span/>
           <a href="https://www.pinterest.com/chocolate_free/" target="blank" rel="noopener" className="pinterest">Pinterest</a>
         </p>
