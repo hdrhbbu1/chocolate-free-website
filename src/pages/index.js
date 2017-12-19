@@ -27,7 +27,7 @@ class IndexPage extends React.Component {
     const articles = this.props.data.allContentfulArticle.edges
     return (
       <ul className="c-paddedList">
-        {articles.map(({ node }, i) => node.section === 'Recipes' && <Article node={node} key={i} />)}
+        {articles.map(({ node }, i) => <Article node={node} key={i} />)}
       </ul>
     )
   }
@@ -39,7 +39,10 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query PageQuery {
-    allContentfulArticle(filter: { node_locale: { eq: "en-US" } }) {
+    allContentfulArticle(filter: {
+        node_locale: {eq: "en-US"},
+        section: {eq: "Recipes"}
+    }) {
       edges {
         node {
           id

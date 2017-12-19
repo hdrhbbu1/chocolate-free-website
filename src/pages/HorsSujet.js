@@ -13,7 +13,7 @@ class HorsSujetPage extends React.Component {
     const articles = this.props.data.allContentfulArticle.edges
     return (
       <ul className="c-paddedList">
-        {articles.map(({ node }, i) => node.section === 'horsSujet' && <Article node={node} key={i} />)}
+        {articles.map(({ node }, i) => <Article node={node} key={i} />)}
       </ul>
     )
   }
@@ -25,7 +25,10 @@ export default HorsSujetPage
 
 export const pageQuery = graphql`
   query HorsSujetPageQuery {
-    allContentfulArticle(filter: { node_locale: { eq: "en-US" } }) {
+    allContentfulArticle(filter: {
+        node_locale: {eq: "en-US"},
+        section: {eq:"horsSujet"}
+    }) {
       edges {
         node {
           id
