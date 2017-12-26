@@ -5,7 +5,6 @@ import ArticleHeader from './ArticleHeader'
 const Article = ({ node, excerpt = false }) => {
   node.slug = '#'
   return (
-      <li>
 				<div className="c-article c-card u-marginBottomLarge">
           <ArticleHeader node={node} />
           { node.featureImage &&
@@ -21,7 +20,6 @@ const Article = ({ node, excerpt = false }) => {
           <div dangerouslySetInnerHTML={{ __html: node.contentModules[0].copy.childMarkdownRemark.html }}/>
 
 				</div>
-			</li>
   )
 }
 

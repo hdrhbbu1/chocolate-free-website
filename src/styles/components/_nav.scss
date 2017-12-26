@@ -1,55 +1,32 @@
-/* =Header & Social navigation
--------------------------------------------------------------- */
-#masthead {
-	position: relative;
-	padding: 50px 0 0 0;
-	padding-top: 2.142857142rem 0 0 0;
-	text-align: center;
+/* Navigation Menu */
+.main-navigation {
+    position: fixed;
+    background: #ffffff;
+    border-top: 5px solid #130216;
+    border-bottom: 1px solid #eaeaea;
+    z-index: 999999999999;
+    min-width: 200px;
+    margin: 0 auto 0px auto;
+    width: 100%;
+    line-height: 2;
+    text-align: center;
+    height: 70px;
 }
-#masthead div.logo img { width: 220px; height: 152px; margin: 0 auto; margin-top: 50px; margin-bottom:40px; }
 
-div.socialnav {
-	position: absolute;
-	right: 0;
-	top: 14px;
-	top: 1rem;
-	font-size: 12px;
-	font-size: 0.857142857rem;
-	line-height: 2;
-	color: #444;
+.main-navigation ul li {
+  display: inline-block;
+  margin: 0 20px;
 }
-div.socialnav a {
-	color: #444;
-	text-decoration: none;
-	font-weight: 100;
-	text-transform: uppercase;
-}
-div.socialnav a:hover {
-	color: #000;
-}
-div.socialnav span {
-	margin: 0 5px;
-	font-size: 1.4em;
-	color: pink;
-}
-.c-nav {
-	font-size: 1.05em;
-	&__list {
-		list-style: none;
-		margin: 0;
-		padding: 1em;
-		border-bottom: 1px solid #ededed;
-		border-top: 1px solid #ededed;
-		display: flex;
-		justify-content: center;
-		align-items: center;
 
-		> li {
-			margin: 0 1em;
-		}
-	}
-
-	a {
-		text-decoration: none;
-	}
+.main-navigation li a {
+    border-bottom: 0;
+    color: #130216;
+    line-height: 5.5;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    background: transparent;
 }
+

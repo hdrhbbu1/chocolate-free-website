@@ -1,0 +1,18 @@
+.side-bar {
+  float: right;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  border-left: 1px solid #eaeaea; grid-area: side-bar;
+}
+
+.widget {
+    word-wrap: normal;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
+    margin: 0 10px 20px 10px;
+    padding: 10px 30px 30px;
+    background: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+}

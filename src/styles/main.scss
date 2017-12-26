@@ -3,34 +3,17 @@
 @import "print";
 @import "components/article";
 @import "components/footer";
-@import "components/list";
 @import "components/nav";
-@import "components/notification";
-@import "util";
+@import "components/content";
+@import "components/featuredPosts";
+@import "components/header";
+@import "components/sidebar";
 
-.c-header {
-  &__logo {
-    display: block;
-    margin: 0 auto;
-  }
+.grid {
+  display: grid;
+  grid-template-columns: 100px 1fr 30% 100px;
+  grid-template-areas: 
+  ". featured-posts featured-posts. "
+  ". content side-bar .";
+  min-height: 100vh;
 }
-
-
-.l-container {
-  max-width: 52em;
-  padding: 0 1em;
-  margin: 0 auto;
-}
-
-.c-post {
-  &--preview {
-    padding: 3em 0;
-  }
-}
-
-.c-posts {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-

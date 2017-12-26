@@ -3,14 +3,12 @@ import Link from 'gatsby-link'
 import * as PropTypes from 'prop-types'
 import { rhythm } from '../utils/typography'
 import ArticleHeader from '../components/ArticleHeader'
-
 const propTypes = {
   data: PropTypes.object.isRequired,
 }
 const Article = ({ node }) => {
   return (
-    <li>
-      <div className="c-article c-card u-marginBottomLarge">
+      <div className="article">
         <ArticleHeader node={node} />
         
     {node.featureImage && <img
@@ -19,7 +17,6 @@ const Article = ({ node }) => {
         <p>{node.contentModules[0].copy.childMarkdownRemark.excerpt}</p>
         <Link rel='noopener' to={`/article/${node.slug}.html`}>Read more...</Link>
       </div>
-    </li>
   )
 }
 
@@ -27,9 +24,9 @@ class IndexPage extends React.Component {
   render() {
     const articles = this.props.data.allContentfulArticle.edges
     return (
-      <ul className="c-paddedList">
-        {articles.map(({ node }, i) => <Article node={node} key={i} />)}
-      </ul>
+        <div className="content"> 
+          {articles.map(({ node }, i) => <Article node={node} key={i} />)}
+        </div>
     )
   }
 }

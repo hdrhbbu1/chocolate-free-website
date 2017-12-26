@@ -12,9 +12,9 @@ class AboutPage extends React.Component {
   render() {
     const articles = this.props.data.allContentfulArticle.edges
     return (
-      <ul className="c-paddedList">
+      <div className="content">
         {articles.map(({ node }, i) => node.section === 'about' && <SingleArticle  node={node} key={i} />)}
-      </ul>
+      </div>
     )
   }
 }
