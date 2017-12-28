@@ -33,9 +33,11 @@ export const pageQuery = graphql`
           slug
           section
           publishDate
-          content {
-            childMarkdownRemark {
-              html
+          contentModules {
+            copy {
+              childMarkdownRemark {
+                html
+              }
             }
           }
           featureImage {

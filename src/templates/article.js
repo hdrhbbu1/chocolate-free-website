@@ -43,9 +43,11 @@ export const pageQuery = graphql`
     contentfulArticle(slug: { eq: $slug }) {
       title
       slug
-      content {
-        childMarkdownRemark {
-          html
+      contentModules {
+        copy {
+          childMarkdownRemark {
+            html
+          }
         }
       }
       publishDate

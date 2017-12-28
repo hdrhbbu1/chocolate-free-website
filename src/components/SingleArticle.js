@@ -18,7 +18,7 @@ const Article = ({ node, excerpt = false }) => {
               srcSet={node.featureImage.responsiveResolution.srcSet}
             />
           }
-          <div dangerouslySetInnerHTML={{ __html: node.content.childMarkdownRemark.html }}/>
+          <div dangerouslySetInnerHTML={{ __html: node.contentModules[0].copy.childMarkdownRemark.html }}/>
 
 				</div>
 			</li>

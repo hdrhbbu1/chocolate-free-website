@@ -8,14 +8,16 @@ const propTypes = {
   data: PropTypes.object.isRequired,
 }
 const Article = ({ node }) => {
+  console.log(node)
   return (
     <li>
       <div className="c-article c-card u-marginBottomLarge">
         <ArticleHeader node={node} />
-        <img
+        
+    {node.featureImage && <img
           src={`${node.featureImage.file.url}?w=800`}
-        />
-        <p>{node.content.childMarkdownRemark.excerpt}</p>
+        />}
+        <p>{node.contentModules[0].copy.childMarkdownRemark.excerpt}</p>
         <Link rel='noopener' to={`/article/${node.slug}.html`}>Read more...</Link>
       </div>
     </li>
@@ -42,7 +44,7 @@ export const pageQuery = graphql`
     allContentfulArticle(filter: {
         node_locale: {eq: "en-US"},
         section: {eq: "Recipes"}
-    }) {
+    }, sort:{fields: [publishDate], order: DESC}) {
       edges {
         node {
           id
@@ -50,9 +52,11 @@ export const pageQuery = graphql`
           slug
           section
           publishDate
-          content {
-            childMarkdownRemark {
-              excerpt
+          contentModules {
+            copy {
+              childMarkdownRemark {
+                excerpt
+              }
             }
           }
           featureImage {
