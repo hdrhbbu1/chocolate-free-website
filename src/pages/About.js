@@ -13,7 +13,7 @@ class AboutPage extends React.Component {
     const articles = this.props.data.allContentfulArticle.edges
     return (
       <div className="content">
-        {articles.map(({ node }, i) => node.section === 'about' && <SingleArticle  node={node} key={i} />)}
+        {articles.map(({ node }, i) => <SingleArticle  node={node} key={i} />)}
       </div>
     )
   }
@@ -25,13 +25,15 @@ export default AboutPage
 
 export const pageQuery = graphql`
   query AboutPageQuery {
-    allContentfulArticle(filter: { node_locale: { eq: "en-US" } }) {
+    allContentfulArticle(filter: {
+      node_locale: { eq: "en-US" },
+      section: { eq: "about" }
+    }) {
       edges {
         node {
           id
           title
           slug
-          section
           publishDate
           contentModules {
             copy {

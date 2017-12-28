@@ -34,7 +34,6 @@ export const pageQuery = graphql`
           id
           title
           slug
-          section
           publishDate
           contentModules {
             copy {

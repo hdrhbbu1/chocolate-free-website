@@ -3,9 +3,11 @@ import Link from 'gatsby-link'
 import * as PropTypes from 'prop-types'
 import { rhythm } from '../utils/typography'
 import ArticleHeader from '../components/ArticleHeader'
+
 const propTypes = {
   data: PropTypes.object.isRequired,
 }
+
 const Article = ({ node }) => {
   return (
       <div className="article">
