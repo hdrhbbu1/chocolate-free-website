@@ -8,7 +8,6 @@ const propTypes = {
   data: PropTypes.object.isRequired,
 }
 const Article = ({ node }) => {
-  console.log(node)
   return (
     <li>
       <div className="c-article c-card u-marginBottomLarge">

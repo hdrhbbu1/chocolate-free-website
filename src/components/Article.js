@@ -17,7 +17,7 @@ const Article = ({ node }) => {
               srcSet={node.featureImage.responsiveResolution.srcSet}
             />
           }
-          <div dangerouslySetInnerHTML={{ __html: node.content.childMarkdownRemark.excerpt }}/>
+          <div dangerouslySetInnerHTML={{ __html: node.contentModules[0].copy.childMarkdownRemark.html }}/>
 
 					<Link rel="noopener" to={`/article/${node.slug}.html`}>Read more...</Link>
 				</div>
