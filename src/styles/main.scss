@@ -13,7 +13,11 @@
   display: grid;
   grid-template-columns: 100px 1fr 30% 100px;
   grid-template-areas: 
-  ". featured-posts featured-posts. "
+  ". header header . "
+  ". featured-posts featured-posts . "
   ". content side-bar .";
   min-height: 100vh;
+}
+main {
+  padding-top: 150px;
 }

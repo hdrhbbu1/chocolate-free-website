@@ -4,4 +4,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+.featured-posts h1 {
+  display: block;
+}
+.featured-posts .posts {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.post-card {
+  width: 320px;
+  height: 600px;
+  margin: 20px;
+}
+.post-card h3 {
+  font-weight: normal;
+  width: 100%;
+  text-align: center;
 }

@@ -3,7 +3,6 @@ import Link from "gatsby-link"
 import * as PropTypes from "prop-types"
 import styles from '../styles/main.scss'
 import { rhythm } from "../utils/typography"
-import SideBar from '../components/SideBar'
 
 const propTypes = {
   children: PropTypes.func.isRequired,
@@ -31,18 +30,7 @@ class DefaultLayout extends React.Component {
       <div>
         <Header />
         <main> 
-          <div className="header">
-          <Link to="/" rel="noopener">
-            <img className="logo" src="/assets/chocolate_free_logo.png" alt="Chocolate Free"/>
-          </Link>
-          </div>
-        <div className="grid">
-          <div className="featured-posts" >
-            <h1> Featured Posts </h1>  
-          </div>
           {this.props.children()}
-          <SideBar />
-        </div>
         </main>
       </div>
     )

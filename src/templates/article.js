@@ -23,7 +23,7 @@ class ArticleTemplate extends React.Component {
       section
     } = article
     return (
-      <article className="c-article">
+      <article className="article">
         <ArticleHeader node={article} />
         <div dangerouslySetInnerHTML={{ __html: contentModules[0].copy.childMarkdownRemark.html }}/>
         <Author author={author} />

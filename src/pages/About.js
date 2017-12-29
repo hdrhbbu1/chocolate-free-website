@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import * as PropTypes from 'prop-types'
 import { rhythm } from '../utils/typography'
 import SingleArticle from '../components/SingleArticle'
+import SideBar from '../components/SideBar'
 
 const propTypes = {
   data: PropTypes.object.isRequired,
@@ -12,8 +13,14 @@ class AboutPage extends React.Component {
   render() {
     const articles = this.props.data.allContentfulArticle.edges
     return (
-      <div className="content">
-        {articles.map(({ node }, i) => <SingleArticle  node={node} key={i} />)}
+      <div className="grid">
+        <div className="featured-posts" >
+          <h1> Featured Posts </h1>
+        </div>
+        <div className="content">
+          {articles.map(({ node }, i) => <SingleArticle node={node} key={i} />)}
+        </div>
+        <SideBar />
       </div>
     )
   }
