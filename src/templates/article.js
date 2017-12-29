@@ -16,7 +16,7 @@ class ArticleTemplate extends React.Component {
     const {
       title,
       slug,
-      content,
+      contentModules,
       featureImage,
       author,
       publishDate,
@@ -26,7 +26,7 @@ class ArticleTemplate extends React.Component {
     return (
       <article className="c-article">
         <ArticleHeader node={article} />
-        <div dangerouslySetInnerHTML={{ __html: content.childMarkdownRemark.html }}/>
+        <div dangerouslySetInnerHTML={{ __html: contentModules[0].copy.childMarkdownRemark.html }}/>
         <Author author={author} />
         <DisqusThread id={slug} path={slug} title={title}/>
       </article>
