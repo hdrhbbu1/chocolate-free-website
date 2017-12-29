@@ -22,7 +22,6 @@ class ArticleTemplate extends React.Component {
       publishDate,
       section
     } = article
-    console.log(content)
     return (
       <article className="c-article">
         <ArticleHeader node={article} />
