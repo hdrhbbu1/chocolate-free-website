@@ -25,9 +25,13 @@
     "gatsby-source-contentful": "^1.0.1",
     "gatsby-transformer-remark": "^1.0.9",
     "lodash": "^4.16.4",
+    "mkdirp": "^0.5.1",
+    "progress": "^2.0.0",
     "react-typography": "^0.15.0",
+    "request": "^2.83.0",
     "slash": "^1.0.0",
     "typography": "^0.15.8",
-    "typography-breakpoint-constants": "^0.14.0"
+    "typography-breakpoint-constants": "^0.14.0",
+    "unfetch": "^3.0.0"
   }
 }

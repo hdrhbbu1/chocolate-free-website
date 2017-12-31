@@ -4,7 +4,7 @@ import * as PropTypes from 'prop-types'
 class ArticleCopy extends Component {
   
   render () {
-    <section>
+    <section className='content-module'>
       {this.props.data.copy}
     </section>
   }

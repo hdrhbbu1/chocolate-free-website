@@ -5,7 +5,7 @@ class ArticleImage extends Component {
   
   render () {
     // TODO: add tracer effect to the image ?
-    <section>
+    <section className='content-module'>
       <img src={this.props.data.image.url} />
     </section>
   }

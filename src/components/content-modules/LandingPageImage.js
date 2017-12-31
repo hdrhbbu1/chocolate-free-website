@@ -9,7 +9,7 @@ class LandingPageImage extends Component {
     } = this.props
     console.log(data)
     return (
-      <div className="header">
+      <div className="header content-module">
       <Link to="/" rel="noopener">
         <img className="logo" src={data.image.file.url} alt="Chocolate Free"/>
       </Link>

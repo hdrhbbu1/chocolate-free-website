@@ -9,20 +9,29 @@ const propTypes = {
 }
 const Header = () => {
   return (
-      <nav id="site-navigation" className="main-navigation" role="navigation">
+    <div className='navigation'>
+        <nav className="main-navigation menu" role="navigation">
+            <ul>
+              <li>
+                <Link to='/'>Home</Link>
+              </li>
+              <li>
+                <Link to='/about'>About</Link>
+              </li>
+              <li>
+              <a href="#">Recipes</a>
+              </li>
+              </ul>
+        </nav>
+        <nav className="social-navigation menu" role="navigation">
           <ul>
-            <li id="menu-item-17099" className="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-17099">
-              <Link to='/'>Home</Link>
-            </li>
-            <li id="menu-item-17105" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-17105">
-            <Link to='/about'>About</Link>
-            </li>
-            <li id="menu-item-17106" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-17106">
-            <a href="#">Recipes</a>
-            </li>
-            </ul>
-      </nav>
-  )
+            <li><a href='https://www.facebook.com/chocolatefreedotcom/' target="_blank" rel='noopener'> <img src='/icons/facebook.svg' width='15' height='15' alt='facebook' /></a></li>
+            <li><a href='https://www.instagram.com/chocolatefreeblog' target="_blank" rel='noopener'> <img src='/icons/instagram.svg' width='15' height='15' alt='instagram' /></a></li>
+            <li><a href='https://www.youtube.com/channel/UCAx4forqSrkq2smhZ-X5oSg' target="_blank" rel='noopener'> <img src='/icons/youtube.svg' width='15' height='15' alt='youtube' /></a></li>
+          </ul>
+        </nav>
+      </div>
+    )
 }
 class DefaultLayout extends React.Component {
   render() {

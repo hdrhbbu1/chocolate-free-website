@@ -1,5 +1,5 @@
 /* Navigation Menu */
-.main-navigation {
+.navigation {
     position: fixed;
     background: #ffffff;
     border-top: 5px solid #130216;
@@ -11,11 +11,14 @@
     line-height: 2;
     text-align: center;
     height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.main-navigation ul li {
+.menu ul li {
   display: inline-block;
-  margin: 0 20px;
+  margin: 0 10px;
 }
 
 .main-navigation li a {
@@ -28,5 +31,10 @@
     font-weight: 400;
     letter-spacing: 1px;
     background: transparent;
+}
+
+.social-navigation {
+    display: inline-block;
+    margin-left: 20px;
 }
 

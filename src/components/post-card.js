@@ -13,7 +13,7 @@ class PostCard extends Component {
     return (
       <article className='post-card'>
         <img src={`${featureImage.file.url}?w=320&h=400`} width='320' height='400' alt=''/>
-        <Link to ={`article/${slug}.html`} > <h3>{title}</h3> </Link>
+        <h3><Link to ={`article/${slug}.html`} >{title}</Link></h3>
       </article>
     )
   }
