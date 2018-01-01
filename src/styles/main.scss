@@ -17,6 +17,13 @@
   ". featured-posts featured-posts . "
   ". content side-bar .";
   min-height: 100vh;
+  @media screen and (max-width: $break-large) {
+    grid-template-areas: 
+    ". header header . "
+    ". featured-posts featured-posts . "
+    ". side-bar side-bar ."
+    ". content content .";
+  }
 }
 main {
   padding-top: 150px;
@@ -31,3 +38,4 @@ h1, h2, h3, h4 {
 .content-module {
   border-bottom: 1px solid #eaeaea;
 }
+

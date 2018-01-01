@@ -70,6 +70,13 @@ export const pageQuery = graphql`
                posts {
                 title
                 slug
+                contentModules {
+                  copy {
+                    childMarkdownRemark {
+                      excerpt
+                    }
+                  }
+                }
                 featureImage {
                   file {
                     url

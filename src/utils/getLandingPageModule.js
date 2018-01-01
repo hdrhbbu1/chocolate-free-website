@@ -7,7 +7,6 @@ const componentsMap = {
   ContentfulLandingPageFeaturedPosts: FeaturedPosts
 }
 export const getLandingPageModule = (module, index) => {
-  console.log(module)
   const Component = componentsMap[module.internal.type]
   if (Component) {
     return <Component data={module} key={index}/>

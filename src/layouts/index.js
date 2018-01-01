@@ -19,7 +19,7 @@ const Header = () => {
                 <Link to='/about'>About</Link>
               </li>
               <li>
-              <a href="#">Recipes</a>
+                <Link to='/hors-sujet.html'>Hors Sujet</Link>
               </li>
               </ul>
         </nav>

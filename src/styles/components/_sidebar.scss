@@ -15,6 +15,40 @@
   border-bottom: 1px solid #eaeaea;
   text-align: center;
 }
+.widget input {
+  margin: 5px auto;
+  max-width: 220px;
+  min-width: 100px;
+  width: 90%;
+  display: block;
+  color: #130216;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  border-radius: 0px;
+  text-align: center;
+  border: 1px solid #eaeaea;
+  border-radius: 0px;
+  padding: 10px 6px;
+}
+.widget input[type='submit'] {
+  padding: 10px 20px;
+  font-size: 12px;
+  line-height: 1.45;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #130216;
+  background-image: none;
+  border: 0px;
+  border-radius: 0px;
+  box-shadow: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  -webkit-appearance: none;
+  font-family: 'Montserrat', sans-serif;
+}
+.widget .button {
+  color: #FFFFFF;
+}
 .insta-feed {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -62,3 +96,4 @@
   text-align: left;
   text-indent: 5px;
 }
+

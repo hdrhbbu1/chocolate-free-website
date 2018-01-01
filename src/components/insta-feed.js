@@ -17,7 +17,7 @@ class InstaFeed extends Component {
   render () {
     return (
       <div className='insta-feed'>
-        {this.state.media.map(mediaElement => <img src={mediaElement.thumbnail_resources[0].src} />)}
+        {this.state.media.map((mediaElement, i) => <img key={i} src={mediaElement.thumbnail_resources[0].src} />)}
       </div>
     )
   }
