@@ -16,5 +16,5 @@ deployment:
     branch: master
     commands:
       - npm run build
-      - aws s3 sync public s3://chocolate-free.com --delete --add-header=Cache-Control:max-age=3153600
+      - aws s3 sync public s3://chocolate-free.com --delete --cache-control "max-age=3153600"
       - aws cloudfront create-invalidation --cli-input-json "{\"DistributionId\":\"$CLOUD_FRONT_INSTANCE\",\"InvalidationBatch\":{\"Paths\":{\"Quantity\":1,\"Items\":[\"/*\"]},\"CallerReference\":\"$(date +%s)\"}}"
