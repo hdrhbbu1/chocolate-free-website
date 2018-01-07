@@ -5,6 +5,7 @@ import ArticleHeader from '../components/ArticleHeader'
 import { rhythm } from '../utils/typography'
 import DisqusThread from '../components/DisqusThread'
 import Author from '../components/Author'
+import Recipe from '../components/Recipe'
 
 const propTypes = {
   data: PropTypes.object.isRequired,

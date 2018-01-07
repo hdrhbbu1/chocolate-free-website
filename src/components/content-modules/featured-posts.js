@@ -9,7 +9,6 @@ class FeaturedPosts extends Component {
     } = this.props
     return (
       <div className="featured-posts content-module" >
-          <h1> Featured Posts </h1>
           <section className='posts' >
             {data.posts.map((post, i) => <PostCard post={post} key={i}/>)}
           </section>
