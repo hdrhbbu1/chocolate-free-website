@@ -30,7 +30,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     )
       .then(result => {
         if (result.errors) {
-          reject(result.errors)
+          reject(result.errors);
         }
         const articleTemplate = path.resolve(`./src/templates/article.js`)
         _.each(result.data.allContentfulArticle.edges, edge => {
@@ -57,7 +57,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 // Implement the Gatsby API “onCreatePage”. This is
 // called after every page is created.
 exports.onCreatePage = async ({ page, boundActionCreators }) => {
-  const { createPage } = boundActionCreators
+  const { createPage } = boundActionCreators;
   console.log(page)
   return new Promise((resolve, reject) => {
     if (page.path.match(/^\/HorsSujet/)) {
