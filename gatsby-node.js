@@ -58,21 +58,21 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 // called after every page is created.
 exports.onCreatePage = async ({ page, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
-  console.log(page)
+  console.log(page);
   return new Promise((resolve, reject) => {
     if (page.path.match(/^\/HorsSujet/)) {
       page.matchPath = "/hors-sujet.html"
 
       // Update the page.
-      createPage(page)
+      createPage(page);
     }
 
     if (page.path.match(/^\/About/)) {
       page.matchPath = "/about.html"
 
-      createPage(page)
+      createPage(page);
     }
 
-    resolve()
+    resolve();
   })
 }
