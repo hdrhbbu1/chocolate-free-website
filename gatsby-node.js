@@ -8,7 +8,7 @@ const slash = require(`slash`)
 // access to any information necessary to programatically
 // create pages.
 exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators
+  const { createPage } = boundActionCreators;
   return new Promise((resolve, reject) => {
     // The “graphql” function allows us to run arbitrary
     // queries against the local Contentful graphql schema. Think of
